@@ -1,6 +1,6 @@
 package model;
 
-public enum Contract {
+public enum ContractType {
     INDEFINITE("Indefinite", "An open-ended employment contract with no specific end date."),
     FIXED("Fixed Term", "A contract with a specific duration agreed upon in advance."),
     PROJECT_BASED("Project Based", "A contract for the duration of a specific project or task."),
@@ -13,7 +13,7 @@ public enum Contract {
     private final String name;
     private final String description;
 
-    Contract(String name, String description) {
+    ContractType(String name, String description) {
         this.name = name;
         this.description = description;
     }
