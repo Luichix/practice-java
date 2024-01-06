@@ -1,7 +1,30 @@
+import java.util.Scanner;
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
+    String hello = "Hello";
+
+    int modelYear;
+    String modelName;
+
+    public Main(int year, String name){
+        modelYear = year;
+        modelName = name;
+    }
+
     public static void main(String[] args) {
+
+        Scanner scan =  new Scanner(System.in);
+        System.out.println("Enter username:");
+
+        String username = scan.nextLine();
+        System.out.println(username);
+
+        Main salute = new Main(1995, "Toyota");
+
+        System.out.println(salute.hello);
+        System.out.println(salute.modelName + " " + salute.modelYear);
+
         // Press Alt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
         System.out.println("Hello World");
@@ -162,5 +185,70 @@ public class Main {
             System.out.println(car);
         }
 
+        String[][] food = {{"Cheese", "Bread"}, {"Burger", "Pizza"}};
+
+        for (String[] strings : food) {
+            for (String string : strings) {
+                System.out.println(string);
+            }
+        }
+
+        myMethod("Lois", 18);
+        myMethod("Rex", 24);
+
+        int sum1 =mySum(5, 10);
+        int sum2 =mySum(15, 20);
+        System.out.println(sum1);
+        System.out.println(sum2);
+
+        int plus1 = plusMethod(10, 20);
+        int plus2 = plusMethod(25, 30);
+        double plus3 = plusMethod(2.55, 3.55);
+        double plus4 = plusMethod(4.55, 6.55);
+
+        System.out.println(plus1+ plus2);
+        System.out.println(plus3+ plus4);
+
+        int recursive = recursiveSum(3);
+        System.out.println(recursive);
+
+        int range = recursiveRangeSum(5, 9);
+        System.out.println(range);
+
+    }
+
+    static void myMethod(String name, int age){
+        System.out.println("This is my Method");
+
+        System.out.println("Hi name is " + name+" and He is " + age + " years old");
+    }
+
+    static int mySum(int a , int b){
+        return a + b;
+    }
+
+    static int plusMethod(int a, int b){
+        return a + b;
+    }
+
+    static double plusMethod(double a, double b){
+        return a + b;
+    }
+
+    static int recursiveSum(int k){
+
+        if (k > 0){
+            return k + recursiveSum(k - 1);
+        } else {
+            return 0;
+        }
+    }
+
+    static int recursiveRangeSum(int start, int end){
+        if (start < end){
+            return end + recursiveRangeSum(start, end - 1);
+        } else {
+            return start;
+        }
     }
 }
