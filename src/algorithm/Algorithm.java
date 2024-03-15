@@ -1,9 +1,6 @@
 package algorithm;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
 
 public class Algorithm {
     /**
@@ -47,11 +44,11 @@ public class Algorithm {
             }
 
 
-        };
+        }
 
         return sum;
 
-    };
+    }
 
     public int[] twoSum2 (int[] numbers, int target){
         /*
@@ -63,7 +60,7 @@ public class Algorithm {
         *   5. If no exists then review the nex value.
         *  */
 
-        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+        HashMap<Integer, Integer> map = new HashMap<>();
         int[] sum = new int[2];
 
         for (int i = 0; i < numbers.length; i++){
@@ -110,8 +107,10 @@ public class Algorithm {
     }
 
     public static void getIntFromListNode(ListNode list){
-
+        ListNode testList = new ListNode(1);
+        System.out.println(testList);
         System.out.println("getFromListNode");
+        System.out.println(list);
     }
 
 
