@@ -23,8 +23,10 @@ public class Main {
         System.out.println(Arrays.toString(algorithm.twoSum2(arrayInt, 4)));
 
 
-        Algorithm.ListNode list1 = new Algorithm.ListNode(1, new Algorithm.ListNode(4, new Algorithm.ListNode(2)) );
-        algorithm.addTwoNumbers(list1, list1);
+        Algorithm.ListNode list1 = new Algorithm.ListNode(8, new Algorithm.ListNode(3, new Algorithm.ListNode(2)) );
+        Algorithm.ListNode list2 = new Algorithm.ListNode(9, new Algorithm.ListNode(2, new Algorithm.ListNode(1)) );
+        algorithm.addTwoNumbers(list1, list2);
+
 
 
 
